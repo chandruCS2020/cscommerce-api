@@ -31,7 +31,7 @@ return res.json(req.category);
 };
 
 exports.update = (req, res) => {
-console.log('req.body', req.body);
+console.log('req.body', req);
 console.log('category update param', req.category);
 const category = req.category;
 category.name = req.body.name;
