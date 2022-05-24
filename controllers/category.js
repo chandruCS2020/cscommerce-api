@@ -32,7 +32,7 @@ return res.json(req.category);
 exports.update = (req, res) => {
 // console.log('req.body', req.body);
 // console.log('category update param', req.params.categoryId);
-Category.findOneAndUpdate(
+Category.update(
     { _id: req.body._id },
     { $set: { name: req.body.name } },
     { new: true },
