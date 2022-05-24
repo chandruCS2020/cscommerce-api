@@ -19,7 +19,11 @@ router.put(
 requireSignin,
 isAuth,
 isAdmin,
-update
+async(req,res) =>{
+    console.log("body",req.body);
+    let category=await Movie.findById(req.params.categoryId);
+    console.log(category)
+}
 );
 router.delete(
 '/category/:categoryId/:userId',
