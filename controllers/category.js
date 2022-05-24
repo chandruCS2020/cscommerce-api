@@ -33,16 +33,17 @@ exports.update = (req, res) => {
 // console.log('req.body', req.body);
 // console.log('category update param', req.params.categoryId);
 // const category = req.category;
-Category.name = req.body.name;
-console.log(req.body.name);
-Category.save((err, data) => {
-    if (err) {
-    return res.status(400).json({
-        error: errorHandler(err),
-    });
-    }
-    res.json(data);
-});
+// Category.name = req.body.name;
+// console.log(req.body.name);
+// Category.save((err, data) => {
+//     if (err) {
+//     return res.status(400).json({
+//         error: errorHandler(err),
+//     });
+//     }
+//     res.json(data);
+// });
+res.json(req.body)
 };
 
 exports.remove = (req, res) => {
