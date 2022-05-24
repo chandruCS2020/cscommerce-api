@@ -118,6 +118,7 @@ form.parse(req, (err, fields, files) => {
     }
 
     product.save((err, result) => {
+        console.log(result);
     if (err) {
         return res.status(400).json({
         error: errorHandler(err),
