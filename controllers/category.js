@@ -14,6 +14,7 @@ Category.findById(id).exec((err, category) => {
 };
 
 exports.create = (req, res) => {
+    console.log(req.body);
 const category = new Category(req.body);
 category.save((err, data) => {
     if (err) {
