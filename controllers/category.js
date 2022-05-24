@@ -34,6 +34,7 @@ exports.update = (req, res) => {
 // console.log('category update param', req.params.categoryId);
 // const category = req.category;
 Category.name = req.body.name;
+console.log(req.body.name);
 Category.save((err, data) => {
     if (err) {
     return res.status(400).json({
